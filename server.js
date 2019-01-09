@@ -5,7 +5,7 @@ const fs = require('fs');
 var port = process.env.PORT || 3000;
 
 var app = express();
-hsb.registerPartials('F:/Node_Work/Test_Work/NodeWebServerDemo1/views/partials');
+hsb.registerPartials('/views/partials');
 app.set('view engine','hbs');
 
 app.use((req,res,next) => {
