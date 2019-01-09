@@ -21,10 +21,10 @@ app.use((req,res,next) => {
 
 });
 //hello
-console.log('');
-app.use((req,res,next) => {
-   res.render('maintenance.hbs');
-});
+// console.log('');
+// app.use((req,res,next) => {
+//    res.render('maintenance.hbs');
+// });
 
 app.use(express.static('F:/Node_Work/Test_Work/NodeWebServerDemo1/public'));
 
@@ -47,9 +47,9 @@ app.get('/about',(req,res) => {
     });
 });
 
-// app.get('/main',(req,res) => {
-//    res.render('maintenance.hbs');
-// });
+app.get('/main',(req,res) => {
+   res.render('maintenance.hbs');
+});
 
 app.get('/bad',(req,res) =>{
     res.send({
