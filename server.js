@@ -2,6 +2,8 @@ const express = require('express');
 const hsb = require('hbs');
 const fs = require('fs');
 
+var port = process.env.PORT || 3000;
+
 var app = express();
 hsb.registerPartials('F:/Node_Work/Test_Work/NodeWebServerDemo1/views/partials');
 app.set('view engine','hbs');
@@ -63,6 +65,6 @@ app.get('/bad',(req,res) =>{
     });
 });
 
-app.listen(3000, () =>{
-    console.log('server run in port no 3000');
+app.listen(port, () =>{
+    console.log('server run in port no '+port);
 });
